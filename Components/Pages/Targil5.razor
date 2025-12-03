@@ -1,0 +1,17 @@
+﻿@page "/"
+
+@{
+    int num;
+    Random rand = new Random();
+    num = rand.Next(0, 1) +1 ;
+}
+
+@if (num == 0)
+{
+    <h1>עץ</h1>
+}
+else
+{
+    <h1>פלי</h1>
+}
+
