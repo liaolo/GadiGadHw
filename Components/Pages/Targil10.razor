@@ -1,0 +1,27 @@
+﻿@page "/t10"
+
+@{
+    int num;
+    Random rand = new Random();
+    num = rand.Next(0, 1) + 1;
+}
+
+<table border="1">
+    <tr>
+        @for (int i = 1; i <= 10; i++)
+        {
+            <td>@i</td>
+        }
+    </tr>
+    @for (int j = 2; j <= 10; j++)
+    {
+        <tr>
+            <td>@j</td>
+            @for (int a = 2; a <= 10; a++)
+            {
+                <td>@(j * a)</td>
+            }
+        </tr>
+    }
+</table>
+

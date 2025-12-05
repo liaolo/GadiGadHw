@@ -1,17 +1,25 @@
-﻿@page "/"
+﻿@page "/t5"
 
 @{
-    int num;
-    Random rand = new Random();
-    num = rand.Next(0, 1) +1 ;
+    int min,max;
+    Random random = new Random();
+    Random random1 = new Random();
+    min = random.Next(0, 99);
+    max = random1.Next(0, 99);
 }
 
-@if (num == 0)
+@if (min > max)
 {
-    <h1>עץ</h1>
+    max = min;
 }
-else
+<h1>Min=@min Max=@max</h1>
+
+@for(int i = min; i <= max; i++)
 {
-    <h1>פלי</h1>
+    <span style="color:blue"> @i </span>
+    <br/>
 }
+
+
+
 

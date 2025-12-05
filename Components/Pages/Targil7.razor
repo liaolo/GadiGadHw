@@ -1,17 +1,16 @@
-﻿@page "/"
+﻿@page "/t7"
 
 @{
     int num;
+    double sum = 0;
     Random rand = new Random();
-    num = rand.Next(0, 1) +1 ;
 }
 
-@if (num == 0)
+@for(int i=0; i <20; i++)
 {
-    <h1>עץ</h1>
+    num = rand.Next(1, 1000) + 1;
+    sum = sum + num;
 }
-else
-{
-    <h1>פלי</h1>
-}
+<h1>The sum of 20 random numbers is: @sum</h1>
+<h1>The average is: @(sum / 20)</h1>
 

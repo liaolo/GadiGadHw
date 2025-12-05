@@ -1,17 +1,19 @@
-﻿@page "/"
+﻿@page "/t8"
 
 @{
-    int num;
+    int num,num2;
     Random rand = new Random();
-    num = rand.Next(0, 1) +1 ;
+    Random s = new Random();
+    num2 = rand.Next(1, 7) + 1;
 }
 
-@if (num == 0)
+<h1>@DateTime.Now.ToString("dd/MM/yyyy")</h1>
+@for(int i = 0; i<6; i++)
 {
-    <h1>עץ</h1>
+    num = rand.Next(1, 37) + 1;
+    <p>@num</p>
 }
-else
-{
-    <h1>פלי</h1>
-}
+<h1>מספר חזק: @num2</h1>
+
+
 

@@ -1,17 +1,15 @@
 ﻿@page "/t4"
 
 @{
-    int num;
-    Random rand = new Random();
-    num = rand.Next(0, 1) +1 ;
+    string blank = "";
 }
 
-@if (num == 0)
+@for (int i = 0; i < 5; i++)
 {
-    <h1>עץ</h1>
+    blank = blank + "*";
+    <footer>@blank</footer>
+   <br/>
 }
-else
-{
-    <h1>פלי</h1>
-}
+
+
 

@@ -1,0 +1,29 @@
+﻿@page "/t9"
+
+@{
+    int num;
+    Random rand = new Random();
+}
+
+
+<table border="1">
+        <tr>
+        <th>יום</th>
+            @for (int i = 1; i <= 7; i++)
+            {
+            <td>@i</td>
+            }
+        </tr>
+
+        <tr>
+        <th>טמפרטורה</th>
+        @for (int i = 1; i <= 7; i++)
+        {
+            num = rand.Next(20, 35) + 1;
+            <td>@num</td>
+        }
+        </tr>
+</table>
+
+
+
